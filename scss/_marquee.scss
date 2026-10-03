@@ -1,0 +1,21 @@
+.marquee-section {
+  .marquee {
+  }
+  ul {
+    li {
+      font-size: 30px;
+      position: relative;
+      &::before {
+        content: "\e909";
+        font-family: "icomoon" !important;
+        font-size: 34px;
+        margin-right: 14px;
+      }
+    }
+  }
+}
+
+.marquee-1 {
+  gap: 69px;
+  padding: 42px 0;
+}

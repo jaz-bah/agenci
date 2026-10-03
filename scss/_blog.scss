@@ -1,0 +1,263 @@
+.blog-section {
+  background: $theme-color;
+  padding-top: 120px;
+  height: 450px;
+  @include breakpoint("max-xl") {
+    height: unset;
+    padding-bottom: 90px;
+  }
+}
+.blog-item {
+  background: $white;
+  padding: 27px;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  .blog-title {
+    font-size: 20px;
+    color: $dark;
+    line-height: 170%;
+  }
+  img {
+    border-radius: 10px;
+  }
+  p {
+    font-size: 12px;
+    line-height: 100%;
+    font-weight: 500;
+    margin-bottom: 35px;
+    color: $dark;
+  }
+}
+.blog-2-section {
+  padding-bottom: 371px;
+}
+
+.blog-2-item {
+  position: relative;
+  margin-bottom: 30px;
+  &::before {
+    content: "";
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(22, 30, 34, 0.3) 30%,
+      rgba(22, 30, 34, 1) 100%
+    );
+  }
+  .blog-2-item-content {
+    position: absolute;
+    bottom: 27px;
+    padding: 28px 16px 0 28px;
+    color: $white;
+    .blog-2-item-date {
+      font-size: 10px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+    .blog-2-item-title {
+      font-size: 18px;
+      line-height: 170%;
+      margin-top: 18px;
+      a {
+        color: $white;
+      }
+    }
+  }
+}
+.blog-2-item-read-more {
+  color: $theme-color-2;
+  font-size: 12px;
+  font-weight: 700;
+  margin-top: 18px;
+}
+
+.blog-section-3 {
+  .h-380px {
+    height: 380px;
+  }
+}
+.blog-items-3 {
+  margin-top: -221px;
+  margin-bottom: 160px;
+  .blog-2-item {
+    &::before {
+      content: unset;
+    }
+    .blog-2-item-content {
+      position: unset;
+      color: $dark;
+      padding-left: 0;
+    }
+    .blog-2-item-title a,
+    .blog-2-item-read-more {
+      color: $dark;
+    }
+  }
+}
+
+.blog-5-img-date {
+  position: relative;
+  .blog-5-date {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    background-color: $white;
+    font-size: 13px;
+    font-weight: 500;
+    line-height: 100%;
+    color: $dark;
+    padding: 16px 35px;
+  }
+}
+
+.blog-page {
+  .blog-item {
+    background-color: $bg-color;
+  }
+}
+
+.sidebar-widget {
+  margin-bottom: 50px;
+  .search {
+    border-bottom: 1px solid $dark;
+    display: flex;
+    align-items: center;
+    input {
+      width: 100%;
+      border: none;
+      font-size: 14px;
+      color: #b2bac4;
+      padding-bottom: 20px;
+      line-height: 100%;
+    }
+    i {
+      font-weight: 700;
+      padding-bottom: 20px;
+    }
+  }
+  h4.widget-header {
+    font-size: 25px;
+    line-height: 120%;
+    margin-bottom: 20px;
+  }
+  .widget-content {
+    ul li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 15px;
+      line-height: 100%;
+      margin-bottom: 33px;
+      a {
+        font-size: 15px;
+        line-height: 100%;
+      }
+    }
+    .recent-post {
+      margin-bottom: 30px;
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+    .recent-post-img {
+      width: 144px;
+      height: 96px;
+      overflow: hidden;
+      border-radius: 6px;
+      img {
+        border-radius: 6px;
+      }
+    }
+  }
+}
+
+.tags {
+  display: flex;
+  gap: 9px;
+  align-items: center;
+  flex-wrap: wrap;
+  a {
+    padding: 9px 24px;
+    font-size: 11px;
+    line-height: 100%;
+    background-color: $bg-color;
+    color: #031031;
+    border-radius: 4px;
+    transition: 0.3s all;
+    &:hover {
+      background-color: $theme-color;
+    }
+  }
+}
+
+.pagination {
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  a,
+  span {
+    font-size: 20px;
+    text-transform: capitalize;
+  }
+}
+
+blockquote {
+  font-size: 24px;
+  line-height: 170%;
+  font-weight: 600;
+  margin: 44px 0 40px;
+  padding: 0 30px;
+}
+
+.next-and-prev-post {
+  padding-bottom: 52px;
+  border-bottom: 1px solid rgba(3, 16, 49, 0.2);
+}
+
+.comment-box {
+  margin-top: 55px;
+  input,
+  textarea {
+    width: 100%;
+    font-size: 14px;
+    border: none;
+    border-bottom: 1px solid $dark;
+    padding-bottom: 20px;
+    color: $dark;
+    line-height: 100%;
+    resize: none;
+  }
+  .input-group {
+    margin-bottom: 30px;
+  }
+  textarea {
+    height: 100px;
+    margin-top: 50px;
+    &:focus {
+      outline: none;
+    }
+  }
+}
+
+.submit-btn {
+  padding: 17px 36px;
+  background-color: $theme-color;
+  border-radius: 4px;
+  display: inline-block;
+  line-height: 100%;
+  font-weight: 500;
+}
+
+.contact-container {
+  .input-group {
+    margin-bottom: 50px;
+  }
+}

@@ -1,0 +1,96 @@
+//>>>>> Component Button Here <<<<<//
+body a:hover{
+  color: inherit;
+}
+.theme-btn {
+  padding: 20px 35px;
+  background: $theme-color;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  border-radius: 4px;
+}
+.theme-btn-2 {
+  padding: 10px 20px;
+  background: $theme-color;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  font-family: $unbounded-font;
+}
+.theme-btn-3 {
+  padding: 16px 60px;
+  background: $theme-color;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  font-family: $unbounded-font;
+}
+
+.theme-btn-4 {
+  padding: 16px 30px;
+  background-color: $white;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  position: relative;
+  border: 4px solid $dark;
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    background-color: $white;
+  }
+  &::before {
+    right: -4px;
+    bottom: -4px;
+  }
+  &::after {
+    top: -4px;
+    left: -4px;
+  }
+  &:hover {
+    &::before {
+      right: 0px;
+      bottom: 0px;
+    }
+    &::after {
+      top: 0px;
+      left: 0px;
+    }
+  }
+}
+
+.theme-btn-6 {
+  padding: 16px 38px;
+  background: $dark;
+  color: $white;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 100%;
+  font-family: $unbounded-font;
+}
+
+.theme-btn-small {
+  background: $theme-color;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 100%;
+  padding: 6px 16px;
+  border-radius: 12px;
+  // margin-right: 20px;
+  // @include breakpoint("max-lg") {
+  //   margin-top: 20px;
+  //   font-size: 30px;
+  // }
+}
+
+
+//>>>>> Component Button End <<<<<//

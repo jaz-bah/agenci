@@ -1,0 +1,249 @@
+br {
+  @include breakpoint(max-lg) {
+    display: none;
+  }
+}
+
+/* background */
+.bg-cover {
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  background-position: center;
+}
+
+//>>>>> Nice Select Css Start <<<<<//
+.nice-select {
+  color: $text-color;
+  background-color: transparent;
+  font-size: 16px;
+  width: unset;
+  outline: none;
+  padding: 18px 30px;
+  border: none;
+  border: 1px solid #e4e4e4;
+  font-weight: 500;
+  color: $text-color;
+
+  @include breakpoint(max-sm) {
+    padding: 12px 20px;
+  }
+
+  @include transition;
+
+  span {
+    color: $text-color;
+    font-size: 16px;
+    margin-bottom: 0 !important;
+    font-weight: 500;
+  }
+
+  &:hover {
+    &::after {
+      border-bottom: 1px solid $text-color;
+      border-right: 1px solid $text-color;
+    }
+  }
+}
+
+.nice-select option {
+  color: $text-color;
+}
+
+.nice-select .current {
+  margin-right: 12px;
+}
+
+.nice-select:after {
+  right: 23px;
+  border-bottom: 1px solid $text-color;
+  border-right: 1px solid $text-color;
+  width: 10px;
+  height: 10px;
+}
+
+.nice-select.open .list {
+  background: $bg-color;
+  margin-top: 16px;
+  width: 100%;
+  text-transform: capitalize;
+  color: $text-color;
+}
+
+.nice-select .option.selected.focus {
+  background: $bg-color;
+  outline: none;
+  color: $theme-color;
+  text-transform: capitalize;
+  font-size: 16px;
+}
+
+.nice-select .option {
+  border: none;
+}
+
+.nice-select .option:hover {
+  background: transparent;
+}
+//>>>>> Nice Select Css End <<<<<//
+
+.underline-offset {
+  text-decoration: underline;
+  text-underline-offset: 4px; /* Adjust the offset value as needed */
+}
+
+.color-theme-1 {
+  color: $theme-color !important;
+}
+.color-dark {
+  color: $dark !important;
+}
+
+.dark-bg {
+  background-color: $dark;
+}
+.bg-theme-1 {
+  background-color: $theme-color !important;
+}
+.bg-theme-2 {
+  background-color: $theme-color-2 !important;
+}
+
+.users-mini {
+  $height: 40px;
+  position: relative;
+  height: 100%;
+  height: $height;
+  margin-bottom: 20px;
+  img {
+    height: $height;
+    width: $height;
+    background-color: $white;
+    border: 2px solid $white;
+    border-radius: 50%;
+    position: absolute;
+    @for $i from 1 through 4 {
+      &:nth-child(#{$i}) {
+        left: #{($i - 1) * 20}px;
+      }
+    }
+  }
+}
+
+.theme-section-m160 {
+  margin-top: 160px;
+}
+.theme-section-m112 {
+  margin-top: 112px;
+}
+
+.theme-section-p120 {
+  padding: 120px 0;
+}
+.pt-120 {
+  padding-top: 120px;
+}
+.pb-160 {
+  padding-bottom: 160px;
+  @include breakpoint("max-md") {
+    padding-bottom: 100px;
+  }
+}
+.br-8 {
+  border-radius: 8px;
+}
+
+.section-bg-dark-with-round {
+  background-color: $dark;
+  color: $white;
+  padding: 120px 0;
+  border-radius: 0 321px 0 0;
+  h4 {
+    color: $white;
+  }
+  @include breakpoint("max-sm") {
+    border-radius: 0 250px 0 0;
+  }
+}
+.section-bg-white-with-round {
+  background-color: $white;
+  color: $dark;
+  padding: 120px 0;
+  border-radius: 0 321px 0 0;
+  @include breakpoint("max-sm") {
+    border-radius: 0 250px 0 0;
+  }
+}
+
+.i40 {
+  font-size: 40px;
+  @include breakpoint("max-xl") {
+    font-size: 30px;
+  }
+}
+.i25 {
+  font-size: 25px;
+  line-height: 170%;
+}
+.lh-170 {
+  line-height: 170%;
+}
+.lh-140 {
+  line-height: 140%;
+}
+.lh-100 {
+  line-height: 100%;
+}
+.h-100vh {
+  height: 100vh;
+}
+
+.section-title-1 {
+  font-size: 40px;
+  line-height: 170%;
+  @include breakpoint("max-lg") {
+    font-size: 30px;
+  }
+}
+.section-title-2 {
+  color: $dark;
+  font-weight: bold;
+  font-size: 58px;
+  line-height: 100%;
+  @include breakpoint("max-md") {
+    font-size: 50px;
+  }
+  @include breakpoint("max-sm") {
+    font-size: 40px;
+  }
+}
+
+.section-title-3 {
+  font-size: 80px;
+  font-weight: 900;
+}
+.section-sub-title-3 {
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 170%;
+}
+
+.sub-title {
+  font-size: 15px;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.rounded-img {
+  border-radius: 0 220px 0 0;
+}
+
+.arrow-btn {
+  background: $white;
+  font-size: 38px;
+  height: 73px;
+  width: 73px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

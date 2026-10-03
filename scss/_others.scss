@@ -1,0 +1,122 @@
+.htw-section {
+  background: $dark;
+  padding: 160px 0;
+  position: relative;
+  .htw-shap {
+    position: absolute;
+    left: 0px;
+    top: 0;
+  }
+  .htw-shap-2 {
+    position: absolute;
+    right: 0px;
+    top: 20px;
+  }
+}
+
+.htw-number {
+  font-size: 100px;
+  font-weight: 900;
+  -webkit-text-fill-color: $dark;
+  text-shadow: -1px -1px 0 $white, 1px -1px 0 $white, -1px 1px 0 $white,
+    1px 1px 0 $white;
+  line-height: 100%;
+}
+
+// Faq
+.faq-2-content-right {
+  background-color: $bg-color;
+  padding: 144px 220px;
+  position: relative;
+  @include breakpoint("max-xl") {
+    padding: 100px;
+  }
+  .faq-2-item-container {
+    position: relative;
+    z-index: 2;
+  }
+  .faq-item-2 {
+    margin-bottom: 122px;
+    @include breakpoint("max-xl") {
+      margin-bottom: 50px;
+    }
+  }
+  .faq-2-bg-shap {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+  }
+  .faq-2-bg-shap-1 {
+    position: absolute;
+    z-index: 1;
+    top: 60px;
+    right: 0;
+  }
+}
+.faq-2-content-left-container {
+  background-image: url("../img/faq.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.faq-2-content-left {
+  padding: 150px 90px;
+  width: 100%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  @include breakpoint("max-xl") {
+    height: 100%;
+    padding: 50px;
+    .i25 {
+      font-size: 20px;
+    }
+  }
+  @include breakpoint("max-md") {
+    height: unset;
+    position: relative;
+  }
+}
+.faq-2-content-item {
+  border-bottom: 1px solid $white;
+  padding-bottom: 30px;
+  margin-bottom: 30px;
+
+  &.show {
+    .faq-2-toggle {
+      margin-bottom: 17px;
+    }
+    .faq-2-content {
+      display: block;
+    }
+  }
+}
+
+.team-card {
+  margin-bottom: 30px;
+  img {
+    border-radius: 8px;
+    margin-bottom: 23px;
+  }
+  .team-card-content {
+    h6 {
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 100%;
+    }
+    p {
+      font-size: 12px;
+      font-weight: 700;
+      margin-top: 20px;
+      line-height: 100%;
+    }
+  }
+}
+
+.faq-page {
+  .faq-2-content-item {
+    border-bottom: 1px solid $dark;
+  }
+}

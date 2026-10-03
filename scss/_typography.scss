@@ -1,0 +1,145 @@
+/* --------------------------------------------
+    Template Default Fonts & Fonts Styles
+ ---------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Teko:wght@300..700&family=Unbounded:wght@200..900&display=swap");
+
+$teko-font: "Teko", sans-serif;
+$unbounded-font: "Unbounded", sans-serif;
+
+//font-family: "Font Awesome 5 Pro";
+$fa: "Font Awesome 5 Pro";
+
+body {
+  font-family: $unbounded-font;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 210%;
+  color: $dark;
+  background-color: $white;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+  width: 100% !important;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  padding: 0;
+}
+
+input:focus {
+  color: var(--white);
+  outline: none;
+}
+
+input {
+  color: $white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0px;
+  padding: 0;
+  text-transform: capitalize;
+  @include transition;
+}
+
+h1 {
+  font-size: 78px;
+  line-height: 140%;
+  @include breakpoint(max-xl) {
+    font-size: 80px;
+  }
+
+  @include breakpoint(max-lg) {
+    font-size: 70px;
+  }
+
+  @include breakpoint(max-sm) {
+    font-size: 50px;
+  }
+}
+
+h2 {
+  font-size: 70px;
+  line-height: 120%;
+  font-weight: 700;
+
+  @include breakpoint(max-xl) {
+    font-size: 42px;
+  }
+
+  @include breakpoint(max-lg) {
+    font-size: 32px;
+  }
+
+  @include breakpoint(max-sm) {
+    font-size: 26px;
+  }
+}
+
+h3 {
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 121%;
+  color: $dark;
+  @include breakpoint(max-sm) {
+    font-size: 20px;
+  }
+}
+
+h4 {
+  font-size: 45px;
+  font-weight: 700;
+  line-height: 100%;
+  color: $dark;
+  @include breakpoint(max-sm) {
+    font-size: 30px;
+  }
+}
+
+h5 {
+  font-size: 20px;
+  font-weight: 600;
+}
+
+h6 {
+  font-size: 18px;
+  font-weight: 600;
+  line-height: 156%;
+}
+
+a {
+  text-decoration: none;
+  outline: none !important;
+  cursor: pointer;
+  color: $header-color;
+  @include transition;
+}
+
+p {
+  margin: 0px;
+  @include transition;
+}
+
+.font-teko {
+  font-family: $teko-font;
+}
+.font-unbounded {
+  font-family: $unbounded-font;
+}
+
+.fw-medium {
+  font-weight: 500;
+}

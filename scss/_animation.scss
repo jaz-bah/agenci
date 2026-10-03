@@ -1,0 +1,249 @@
+// buttons animation start
+.anm-position-aware {
+    background-color: transparent;
+    color: $white;
+    border: 2px solid $theme-color;
+    position: relative;
+    overflow: hidden;
+
+    .text {
+        position: relative;
+        z-index: 1;
+
+        &.t-dark {
+            color: $dark;
+        }
+    }
+
+    .bg {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        display: block;
+        width: 0%;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: $theme-color;
+        transition: width 0.8s ease-in-out, height 0.8s ease-in-out;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    &.b-dark{
+        border: 2px solid $dark;
+    }
+
+    &:hover {
+        color: $dark;
+
+        .bg {
+            width: 300%;
+        }
+
+        &.b-dark{
+            border: 2px solid $theme-color;
+        }
+    }
+}
+
+.anm-border-grow {
+    background-color: transparent;
+    position: relative;
+
+    .top-bottom,
+    .left-right {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        height: 100%;
+
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            background-color: $dark;
+            transition: all 0.5s ease-in-out;
+        }
+    }
+
+    .top-bottom {
+        &::before,
+        &::after {
+            width: 20px;
+            height: 2px;
+        }
+
+        &.bottom {
+            &::before {
+                content: none;
+            }
+        }
+
+        &::before {
+            top: 0;
+            left: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    .left-right {
+        &::before,
+        &::after {
+            height: 20px;
+            width: 2px;
+        }
+
+        &::before {
+            left: 0;
+            top: 0;
+        }
+
+        &::after {
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    &.c-white {
+        color: $white;
+
+        .top-bottom,
+        .left-right {
+            &::before,
+            &::after {
+                background-color: $white;
+            }
+        }
+    }
+
+    &:hover {
+        .top-bottom {
+            &::before,
+            &::after {
+                width: 100%;
+            }
+        }
+
+        .left-right {
+            &::before,
+            &::after {
+                height: 100%;
+            }
+        }
+    }
+}
+
+.anm-reveal-text {
+    max-width: max-content;
+    text-wrap: nowrap;
+    overflow: hidden;
+
+    &:hover {
+        .line {
+            animation: revelTextLine 0.6s cubic-bezier(0.75, 0, 0.125, 1) 1;
+        }
+        .char {
+            animation: revelTextChar 0.6s cubic-bezier(0.75, 0, 0.125, 1) 1;
+        }
+    }
+}
+
+@keyframes revelTextLine {
+    0% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+}
+@keyframes revelTextChar {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0%);
+        opacity: 1;
+    }
+}
+
+.home-2 {
+    .anm-position-aware {
+        border: 2px solid $theme-color-2;
+        .bg {
+            background-color: $theme-color-2;
+        }
+    }
+
+    .anm-border-grow {
+        .top-bottom,
+        .left-right {
+            &::after,
+            &::before {
+                background-color: $theme-color-2;
+            }
+        }
+    }
+}
+
+// buttons animation end
+
+// heading animation start
+.anm-lg-heading-reveal .line,
+.anm-sm-heading-reveal .line,
+.anm-sm-heading-fade-left {
+    overflow: hidden;
+}
+
+.anm-lg-heading-reveal,
+.anm-sm-heading-reveal,
+.anm-sm-heading-fade-left {
+    text-transform: uppercase;
+
+    * {
+        text-transform: uppercase;
+    }
+}
+
+.anm-pera-scrub-title{
+    text-transform: lowercase;
+    text-align: center;
+}
+// heading animation end
+
+// image animation start
+
+.anm-image-fade-scale {
+    overflow: hidden;
+    padding: 0;
+}
+
+.anm-image-fade-left{
+  position: relative;
+  overflow: hidden;
+  .reveal{
+    width: 100%;
+    height: 110%;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    left: 0;
+    background-color: $white;
+
+    &.dark{
+      background-color: $dark;
+    }
+  }
+}
+
+// image animation end
+.anm-image-paralax{
+    background-size: 100% 120%;
+}

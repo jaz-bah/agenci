@@ -1,0 +1,143 @@
+.service-item {
+  @include breakpoint("max-xl") {
+    margin-bottom: 52px;
+  }
+  h4 {
+    margin: 17px 0 10px 0;
+  }
+  ul {
+    margin-top: 19px;
+  }
+}
+
+.counter-content {
+  margin-top: 52px;
+  border: 0.5px solid $white;
+  ul.service-title {
+    padding: 60px 34px;
+    border-right: 0.5px solid $white;
+    display: block;
+    @include breakpoint("max-lg") {
+      border-right: 0;
+      border-bottom: 0.5px solid $white;
+    }
+    li {
+      a {
+        color: $white;
+        line-height: 170%;
+        font-weight: 900;
+        &:hover,
+        &.active {
+          color: $theme-color;
+        }
+      }
+    }
+  }
+  .counter-container {
+    .col-md-6 {
+      border-right: 0.5px solid $white;
+      border-bottom: 0.5px solid $white;
+    }
+    .top {
+      border-bottom: 0.5px solid $white;
+      .counter-item:nth-child(1) {
+        border-right: 0.5px solid $white;
+      }
+    }
+    .bottom {
+      .counter-item:nth-child(1) {
+        border-right: 0.5px solid $white;
+      }
+    }
+    .counter-item {
+      padding: 45px;
+      width: 50%;
+      p {
+        margin-bottom: 24px;
+      }
+      &-text {
+        font-size: 40px;
+        line-height: 100%;
+        font-weight: 700;
+        @include breakpoint("max-xl") {
+          font-size: 30px;
+        }
+      }
+    }
+  }
+}
+.counter-content-2 {
+  ul.service-title li a {
+    color: $dark;
+  }
+}
+
+.service-section-2 {
+  .service-2-content {
+    p {
+      margin: 22px 0;
+    }
+  }
+}
+.list-item-left-icon {
+  li {
+    position: relative;
+    display: flex;
+    &::before {
+      content: "–";
+      margin-right: 5px;
+      display: inline-block;
+    }
+  }
+}
+.faq-item {
+  padding: 65px 0 60px;
+  .faq-toggle {
+    h4 {
+      font-size: 25px;
+      font-weight: 500;
+      position: relative;
+      &:not(.collapsed)::after {
+        content: "\f068";
+        font-family: "Font Awesome 5 Pro";
+      }
+      &::after {
+        content: "\f067";
+        background: transparent;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: 500;
+        transition: all 0.3s ease-in-out !important;
+        right: 0;
+        position: absolute;
+        font-size: 20px;
+      }
+    }
+  }
+  .faq-content {
+    color: $dark;
+    p {
+      margin: 37px 0;
+    }
+  }
+  border-bottom: 1px solid $dark;
+  .faq-content.show {
+    display: block;
+  }
+}
+
+.faq-cards{
+  height: 100vh;
+  .faq-card-wrapper{
+    position: relative;
+
+    .faq-card{
+      background-color: $theme-color-3;
+      margin-top: 30px;
+      border-radius: 30px;
+      box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
+  }
+}

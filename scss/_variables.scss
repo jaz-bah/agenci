@@ -1,0 +1,66 @@
+:root {
+  --body: #fff;
+  --black: #000;
+  --white: #fff;
+  --theme: #c9f31d;
+  --text: #5e5f63;
+  --dark: #161e22;
+  --theme2: #ec6219;
+  --theme3: #e5e7df;
+  --bg: #f8f8f8;
+  --ratting: #f09815;
+
+  --header: #222222;
+  --base: #166fd3;
+  --text2: #8a8c94;
+  --border: #eeeff4;
+  --border2: #d7d7d7;
+  --button: #1c2539;
+  --button2: #030734;
+  --bg2: #f6f6f6;
+  --bg3: #f5f6fd;
+  --bg4: #020001;
+  --bg5: #f8f8f8;
+  --bg6: #020626;
+  --bg7: #edeeee;
+  --color-gradient-1: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 0%,
+    rgba(0, 0, 0, 0) 19.36%,
+    rgba(15, 116, 230, 0.55) 71.26%,
+    #166fd3 100%
+  );
+  --color-gradient-2: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.31) 0%,
+    rgba(0, 0, 0, 0.78) 100%
+  );
+  ---box-shadow: 0px 9px 21px rgba(0, 0, 0, 0.04);
+}
+
+// Theme Color - Defualt Colors
+$black: var(--black);
+$white: var(--white);
+$theme-color: var(--theme);
+$theme-color-2: var(--theme2);
+$theme-color-3: var(--theme3);
+$text-color: var(--text);
+$dark: var(--dark);
+$bg-color: var(--bg);
+$ratting: var(--ratting);
+
+$ratting-color: var(--ratting);
+$text-color-2: var(--text2);
+$header-color: var(--header);
+$border-color: var(--border);
+$border-color-2: var(--border2);
+$button-color: var(--button);
+$bg-color-2: var(--bg2);
+$bg-color-3: var(--bg3);
+$bg-color-4: var(--bg4);
+$bg-color-5: var(--bg5);
+$bg-color-6: var(--bg6);
+$bg-color-7: var(--bg7);
+$color-gradient-1: var(--color-gradient-1);
+$color-gradient-2: var(--color-gradient-2);
+$shadow: var(---box-shadow);

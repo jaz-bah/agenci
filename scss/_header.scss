@@ -1,0 +1,322 @@
+.header {
+  color: $white;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+  .header-main {
+    padding: 30px;
+  }
+  a,
+  span {
+    color: $white;
+  }
+}
+
+.logo {
+  font-size: 25px;
+}
+
+header {
+  .flex-end {
+    justify-content: end;
+  }
+}
+
+.hamburger {
+  cursor: pointer;
+  span {
+    height: 2px;
+    width: 21px;
+    margin-bottom: 6px;
+    background-color: $white;
+    display: block;
+    &:nth-of-type(2) {
+      width: 9px;
+    }
+    .main-menu & {
+      background-color: $dark;
+    }
+    .main-menu.text-white & {
+      background-color: $white;
+    }
+  }
+}
+
+.header-2 {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+
+  .hamburger {
+    cursor: pointer;
+    padding: 45px 0 45px 75px;
+    background-color: $dark;
+  }
+}
+
+.main-menu {
+  position: absolute;
+  width: 100%;
+  padding: 25px 0;
+  z-index: 2;
+  nav {
+    ul {
+      a {
+        font-size: 14px;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+.header-5 {
+  z-index: 2;
+  padding: 0;
+
+  .logo {
+    padding: 32px 0;
+  }
+
+  .navbar-nav > ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    & > li {
+      padding: 8px 0px;
+    }
+  }
+  .hamburger {
+    display: none;
+    @include breakpoint(max-xl) {
+      display: block;
+    }
+  }
+}
+header {
+  transition: all 0.9s;
+  animation: 500ms ease-in-out 0s normal none 1 running fadeInDown;
+  &.sticky {
+    position: fixed !important;
+    background: $dark;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+    box-shadow: $shadow;
+  }
+}
+
+.header-2.sticky {
+  .logo {
+    padding-top: 0;
+    a {
+      color: $white;
+    }
+  }
+}
+.home-4 .main-menu.sticky {
+  background-color: $dark;
+}
+.main-menu.sticky {
+  background-color: $theme-color-3;
+}
+.default-page {
+  .main-menu.sticky {
+    background-color: $dark;
+    a {
+      color: $white;
+    }
+    .hamburger span {
+      background-color: $white;
+    }
+  }
+}
+
+.header-5.sticky {
+  .logo {
+    background-color: unset !important;
+    a {
+      color: $dark !important;
+    }
+  }
+  .dark-bg {
+    background-color: transparent;
+    a {
+      color: $dark !important;
+    }
+  }
+  .hamburger {
+    display: block;
+  }
+}
+
+.main-menu {
+  .navbar-nav {
+    > ul {
+      gap: 19px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      > li {
+        position: relative;
+        display: inline-block;
+        > a {
+          display: inline-block;
+          color: $dark;
+          font-size: 14px;
+          font-weight: 500;
+          padding-right: 30px;
+          line-height: 100%;
+          margin: 0;
+          transition: all linear 0.3s;
+        }
+        &:last-child > a {
+          padding-right: 0;
+        }
+        .submenu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          width: 200px;
+          z-index: 99;
+          background: $white;
+          max-height: 450px;
+          box-shadow: rgb(0 0 0 / 15%) 0px 4px 14px;
+          padding-left: 0;
+          opacity: 0;
+          z-index: 99;
+          visibility: hidden;
+          transform: scaleY(0.3);
+          transform-origin: top;
+          transition: all linear 0.2s;
+          transition: all 0.3s 0s ease-out;
+          li {
+            margin-left: 0;
+            line-height: 30px;
+            position: relative;
+            a {
+              color: $dark;
+              display: block;
+              border-bottom: 1px solid $bg-color;
+              padding: 7px 20px;
+              transition: all linear 0.3s;
+              font-size: 14px;
+              font-weight: 500;
+            }
+            &:last-child {
+              a {
+                border: none;
+              }
+            }
+            .submenu {
+              left: 100%;
+              top: 0;
+              visibility: hidden;
+              opacity: 0;
+              font-size: 16px;
+            }
+            &:hover {
+              > .submenu {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1);
+              }
+            }
+          }
+        }
+        &:hover {
+          > .submenu {
+            opacity: 1;
+            visibility: visible;
+            transform: scale(1);
+          }
+        }
+      }
+      > .dropdown-nav {
+        li {
+          > a {
+            &:hover {
+              background: $theme-color;
+              color: $dark;
+              border-color: $bg-color;
+            }
+          }
+          a.active {
+            background: $theme-color;
+            color: $dark;
+            border-color: $bg-color;
+          }
+        }
+      }
+      > li.dropdown-nav {
+        > a {
+          position: relative;
+        }
+      }
+    }
+    ul {
+      li.dropdown-nav {
+        > a {
+          &::after {
+            content: "\f107";
+            font-family: "Font Awesome 5 pro" !important;
+            transform: translateY(2px);
+            font-size: 14px;
+            position: absolute;
+            font-weight: 500;
+            margin-left: 5px;
+            right: 10px;
+            width: 15px;
+            transition: all 0.3s ease-out 0s;
+            display: inline-block;
+          }
+        }
+      }
+    }
+    .submenu {
+      li.dropdown-nav {
+        > a {
+          &::after {
+            position: absolute;
+          }
+        }
+      }
+    }
+  }
+}
+
+.text-white {
+  .logo {
+    a {
+      color: $white !important;
+    }
+  }
+  .navbar-nav > ul > li > a {
+    color: $white !important;
+  }
+}
+
+.main-menu-mobile {
+  .dropdown-toggle-btn {
+    display: none;
+  }
+  .submenu {
+    display: none;
+    margin-left: 10px;
+    li {
+      margin-top: 20px;
+      margin-bottom: 0px;
+      a {
+        font-size: 16px;
+        font-weight: 400;
+      }
+    }
+    .dropdown-toggle-btn {
+      display: inline-block;
+      color: $white;
+      margin-left: 10px;
+    }
+  }
+}

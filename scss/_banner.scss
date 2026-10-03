@@ -1,0 +1,239 @@
+.banner-1 {
+  position: relative;
+  .container {
+    position: relative;
+  }
+  &-content {
+    padding-top: 217px;
+    h1 {
+      margin-bottom: 100px;
+      position: relative;
+      font-weight: bold;
+      z-index: 2;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-image: url("../img/banner-before-1.png");
+        background-position: center;
+        background-size: cover;
+        width: 340px;
+        height: 340px;
+        z-index: -1;
+      }
+    }
+    .banner-1-footer {
+      padding: 62px 0 123px;
+    }
+  }
+  position: relative;
+  &-shap {
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+  &-shap-2 {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}
+
+.banner-2 {
+  .banner-content {
+    padding-top: 239px;
+    background-color: $white;
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      width: 30%;
+      background: white;
+      bottom: 0;
+      top: 0;
+      z-index: -2;
+    }
+    h1 {
+      color: $dark;
+      font-family: $unbounded-font;
+      font-size: 78px;
+      line-height: 140%;
+      position: relative;
+      margin-bottom: 89px;
+      z-index: 2;
+      font-weight: bold;
+      @include breakpoint("max-lg") {
+        font-size: 65px;
+      }
+      span {
+        color: $theme-color-2;
+      }
+      &::after {
+        content: "\e906";
+        font-family: "icomoon" !important;
+        color: $theme-color-2;
+        opacity: 0.4;
+        position: absolute;
+        top: -23px;
+        left: -35px;
+        z-index: -1;
+      }
+    }
+  }
+}
+
+.banner-3-section {
+  background-color: $theme-color-3;
+  .banner-3-content {
+    padding: 229px 0 138px;
+  }
+  .banner-3-title {
+    font-size: 39px;
+    font-family: $unbounded-font;
+    line-height: 170%;
+    font-weight: bold;
+  }
+  .banner-3-marquee {
+    h1 {
+      font-size: 120px;
+      font-family: $unbounded-font;
+      line-height: 100%;
+      font-weight: bold;
+      color: $dark;
+      text-transform: uppercase;
+      display: flex;
+      gap: 15px;
+      margin-bottom: 160px;
+      span {
+        display: inline-flex;
+      }
+    }
+  }
+}
+
+.home-3-banner_fun-fact {
+  background-color: $theme-color-3;
+  padding: 160px 0;
+  .home-3-banner_fun-fact-content {
+    font-size: 130px;
+    line-height: 140%;
+    font-weight: 900;
+    color: $dark;
+    text-transform: uppercase;
+    @include breakpoint("max-md") {
+      font-size: 70px;
+    }
+    @include breakpoint("max-lg") {
+      font-size: 100px;
+    }
+  }
+}
+
+.banner-4-content {
+  h1 {
+    padding: 257px 0 123px;
+    font-size: 78px;
+    font-weight: 900;
+    line-height: 170%;
+    @include breakpoint("max-xl") {
+      font-size: 60px;
+    }
+    @include breakpoint("max-md") {
+      padding: 170px 0 60px;
+    }
+  }
+}
+
+.banner-4-text {
+  color: $dark;
+  font-size: 26px;
+  line-height: 170%;
+}
+
+.banner-4-left {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  .banner-4-text {
+    margin-bottom: 22px;
+  }
+  .banner-4-content {
+    padding: 50px;
+  }
+}
+
+.banner-right-1 {
+  height: 363px;
+  background-color: #f8f8f8;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: url("../img/waves.png");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+
+.banner-right-content {
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 27px;
+  h3 {
+    font-size: 50px;
+    line-height: 100%;
+  }
+  p {
+    font-size: 25px;
+    font-weight: 900;
+    color: $dark;
+    margin-top: 28px;
+    @include breakpoint("max-xl") {
+      margin-top: 20px;
+    }
+  }
+}
+
+.banner-right-2 {
+  position: relative;
+  height: 363px;
+  background: url("../img/banner-4.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white;
+  &::before {
+    content: "";
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    bottom: 0;
+    background: linear-gradient(
+      90deg,
+      rgba(22, 30, 34, 0.3) 30%,
+      rgb(22, 30, 34) 100%
+    );
+  }
+}
+
+.banner-right-2-content {
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  .arrow-btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+  }
+}

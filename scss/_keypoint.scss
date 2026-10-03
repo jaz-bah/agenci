@@ -1,0 +1,72 @@
+.kp-content {
+  @include breakpoint("max-md") {
+    margin-bottom: 30px;
+  }
+  i {
+    color: $dark;
+    font-size: 40px;
+  }
+  h4 {
+    margin-top: 17px;
+    margin-bottom: 7px;
+  }
+}
+
+.kp-section-2 {
+  .kp-2-item {
+    margin-top: 65px;
+    h6 {
+      font-size: 25px;
+      line-height: 100%;
+      font-weight: 600;
+      margin: 27px 0 17px;
+    }
+  }
+  .small-btn {
+    font-size: 12px;
+    font-weight: 500;
+    background-color: $theme-color-2;
+    padding: 6px 8px;
+    display: inline;
+    color: $white;
+  }
+  p {
+    color: $dark;
+    font-weight: 400;
+  }
+}
+
+.kp-section-3 {
+  background-color: $theme-color-3;
+  padding: 160px 0;
+  &-title {
+    font-size: 40px;
+    line-height: 170%;
+    font-weight: bold;
+    font-family: $unbounded-font;
+    border-bottom: 1px solid $dark;
+    padding-bottom: 65px;
+  }
+  h5 {
+    font: 25px;
+    font-weight: bold;
+    color: $dark;
+    &:first-child {
+      padding: 80px 0 65px;
+    }
+  }
+}
+.kp-content-2-container {
+  padding-top: 175px;
+}
+.kp-content-2 {
+  color: $dark;
+
+  h4 {
+    font-size: 25px;
+    margin: 17px 0;
+  }
+  p {
+    font-weight: 400;
+  }
+}

@@ -1,0 +1,102 @@
+.award-title {
+  font-size: 25px;
+  line-height: 100%;
+  @include breakpoint("max-md") {
+    font-size: 30px;
+  }
+}
+.award-item {
+  border-bottom: 2px solid $dark;
+  padding: 40px 0;
+  position: relative;
+  img {
+    position: absolute;
+    right: 180px;
+    opacity: 0;
+    top: 50%;
+    transform: translate(0%, -50%);
+    @include transition;
+    @include breakpoint(max-md) {
+      right: 30px;
+    }
+  }
+  &:hover {
+    img {
+      opacity: 1;
+    }
+  }
+  &:last-child {
+    border: 0;
+  }
+  &-title {
+    color: $dark;
+    font-size: 20px;
+    margin-bottom: 12px;
+    @include breakpoint("max-md") {
+      font-size: 25px;
+    }
+  }
+}
+
+.award-2-section {
+  padding: 120px 0;
+  color: $dark;
+  .award-2-item {
+    .award-2-title,
+    p {
+      color: $dark;
+    }
+    .award-2-title {
+      font-size: 20px;
+      margin-bottom: 20px;
+      @include breakpoint("max-xl") {
+        margin-bottom: 10px;
+      }
+      @include breakpoint("max-md") {
+        margin-top: 10px;
+      }
+    }
+    .award-2-sub-title {
+      font-size: 14px;
+      margin-bottom: 20px;
+      @include breakpoint("max-xl") {
+        margin-bottom: 10px;
+      }
+    }
+    .award-2-year {
+      font-size: 20px;
+      font-weight: 500;
+      @include breakpoint("max-md") {
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+.award-items-3 {
+  background-color: $dark;
+  padding: 65px 0 160px;
+  color: $white;
+  img {
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 100%;
+    margin-top: 14px;
+  }
+}
+
+.award-content-2 {
+  margin-top: 43px;
+  .award-item {
+    padding: 55px 0;
+  }
+  .award-item-title {
+    font-size: 20px;
+  }
+  .award-item:last-child {
+    border: 0;
+  }
+}

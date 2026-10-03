@@ -1,0 +1,56 @@
+@font-face {
+  font-family: "icomoon";
+  src: url("../fonts/icomoon.eot?kpx60m");
+  src: url("../fonts/icomoon.eot?kpx60m#iefix") format("embedded-opentype"),
+    url("../fonts/icomoon.ttf?kpx60m") format("truetype"),
+    url("../fonts/icomoon.woff?kpx60m") format("woff"),
+    url("../fonts/icomoon.svg?kpx60m#icomoon") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: block;
+}
+
+[class^="icon-"],
+[class*=" icon-"] {
+  /* use !important to prevent issues with browser extensions that change fonts */
+  font-family: "icomoon" !important;
+  speak: never;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+
+  /* Better Font Rendering =========== */
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-ag-arrow-left:before {
+  content: "\e900";
+}
+.icon-ag-arrow-right:before {
+  content: "\e901";
+}
+.icon-ag-arrow-right-2:before {
+  content: "\e902";
+}
+.icon-ag-feature-icon-1:before {
+  content: "\e903";
+}
+.icon-ag-feature-icon-3:before {
+  content: "\e904";
+}
+.icon-ag-feature-icon-5:before {
+  content: "\e905";
+}
+.icon-ag-home-2-before:before {
+  content: "\e906";
+  color: #ec6219;
+}
+.icon-ag-play-1:before {
+  content: "\e908";
+}
+.icon-ag-star-1:before {
+  content: "\e909";
+}

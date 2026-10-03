@@ -1,0 +1,72 @@
+.home-1 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $teko-font;
+  }
+}
+.home-2 {
+  background: $dark;
+  color: $white;
+  font-family: $unbounded-font;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-family: $unbounded-font;
+  }
+  p {
+    color: $white;
+  }
+  .theme-btn-2 {
+    color: $theme-color-2;
+  }
+  .theme-btn-3 {
+    background-color: $theme-color-2;
+    color: $white;
+  }
+}
+
+.home-3 {
+  .theme-btn-3 {
+    background-color: $theme-color-3;
+
+    &.bg-white {
+      background-color: $white;
+    }
+  }
+
+  .anm-image-fade-left{
+    .reveal{
+      background-color: $theme-color-3;
+    }
+  }
+}
+
+.home-5 {
+  .theme-btn {
+    border-color: $dark;
+
+    .bg {
+      background-color: $dark;
+    }
+    .text.t-dark {
+      -webkit-filter: invert(100%);
+      filter: invert(100%);
+      mix-blend-mode: difference;
+    }
+  }
+  .theme-btn-3 {
+    background-color: $dark;
+    color: $white;
+
+    &.bg-white {
+      background-color: $white;
+    }
+  }
+}
